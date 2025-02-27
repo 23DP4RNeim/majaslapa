@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Info</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="src/images/car.jpg" alt="Auto Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Sākums</a></li>
+                <li><a href="#calc">Kalkulators</a></li>
+                <li><a href="#cats">Kaķu fakti</a></li>
+                <li><a href="#contact">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Viss par automašīnām un kaķiem</h1>
+            <p>Uzzini savu degvielas patēriņu un interesantus faktus par mjau.</p>
+        </section>
+
+        <section id="calc" class="calculator">
+            <h2>Degvielas patēriņa kalkulators</h2>
+            <label for="distance">Nobrauktie kilometri:</label>
+            <input type="number" id="distance" placeholder="Ievadi km">
+            
+            <label for="consumption">Vidējais patēriņš (L/100km):</label>
+            <input type="number" id="consumption" placeholder="Ievadi L/100km">
+            
+            <button onclick="calculateFuel()">Aprēķināt</button>
+            <p id="result" aria-live="polite"></p>
+        </section>
+
+        <section id="cats" class="cat-facts">
+            <h2>Nejaušs kaķu fakts</h2>
+            <button onclick="getCatFact()">Iegūt faktu</button>
+            <p id="cat-fact" aria-live="polite"></p>
+        </section>
+
+        <section id="contact" class="contacts">
+            <div class="container">
+                <form action="action_page.php">
+              
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+              
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+                  <input type="submit" value="Submit">
+              
+                </form>
+              </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Auto Info. Visas tiesības aizsargātas.</p>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
